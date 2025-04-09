@@ -3,6 +3,8 @@ Este es mi proyecto de la clase de programacion declarativa donde desarrollaremo
 
 INTEGRANTES
 PERLA BUCIO LEON / ENCARGADA 
+
 TANIA GUADARRAMA REYES / PAGINA RPINCIPAL 
+
 LEONARDO MAYA MAYA / PAGINA SECUNDARIA 
 
