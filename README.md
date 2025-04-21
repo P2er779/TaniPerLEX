@@ -1,4 +1,4 @@
-![Captura de pantalla 2025-04-09 173125](https://github.com/user-attachments/assets/ee425104-251f-4c8f-bf31-d9525aca5086) TaniPerLEX
+TaniPerLEX
 Este es mi proyecto de la clase de programacion declarativa donde desarrollaremos una pagina web de una tienda de makeup
 
 INTEGRANTES
