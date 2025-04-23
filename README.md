@@ -11,7 +11,8 @@ TANIA GUADARRAMA REYES / PAGINA PRINCIPAL
 LEONARDO MAYA MAYA / PAGINA SECUNDARIA 
 
 
-![captura codigo](https://github.com/user-attachments/assets/1996044c-dd7f-427e-a729-a455a2e87670)
+
+![capp](https://github.com/user-attachments/assets/4ac1e013-3aeb-480f-8a12-30bfc63eff32)
 
 
 
