@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPORT TPL Mexico</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff3c00;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #ff3c00;
+    }
+
+    .productos {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .productos h2 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #111;
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .producto {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .producto h3 {
+      margin-bottom: 10px;
+    }
+
+    .producto p {
+      font-weight: bold;
+      color: #ff3c00;
+      margin-bottom: 10px;
+    }
+
+    .producto button {
+      background-color: #111;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .producto button:hover {
+      background-color: #333;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SPORT TPL Mexico</div>
+    <nav>
+      <ul>
+        <li><a onclick="mostrarSeccion('inicio')">Inicio</a></li>
+        <li><a onclick="mostrarSeccion('hombres')">Hombres</a></li>
+        <li><a onclick="mostrarSeccion('mujeres')">Mujeres</a></li>
+        <li><a onclick="mostrarSeccion('carrito')">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="productos active">
+    <h2>Bienvenido a SPORT TPL Mexico</h2>
+    <p>Selecciona una categoría del menú para comenzar.</p>
+  </section>
+
+  <section id="hombres" class="productos section">
+    <h2>Ropa Deportiva para Hombres</h2>
+    <div class="productos-grid">
+      <div class="producto">
+        <img src="https://m.media-amazon.com/images/I/71eTXqGVAYL._AC_SX569_.jpg" alt="Playera Hombre">
+        <h3>Playera Nike Hombre</h3>
+        <p>$299</p>
+        <button onclick="agregarAlCarrito('Playera Nike Hombre', 299)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://i.ebayimg.com/images/g/BagAAOSw5sVmOB83/s-l1600.webp" alt="Short Hombre">
+        <h3>Short Nike Hombre</h3>
+        <p>$349</p>
+        <button onclick="agregarAlCarrito('Short Nike Hombre', 349)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://i.ebayimg.com/images/g/aR8AAOSw9IpjKNMY/s-l1600.webp" alt="pantalon Hombre">
+        <h3>pantalon Nike Hombre</h3>
+        <p>$399</p>
+        <button onclick="agregarAlCarrito('pantalon Nike Hombre', 399)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://th.bing.com/th/id/OPHS.0KGUfq6gi5ZsJw474C474?w=300&h=300&o=5&dpr=1.3&pid=21.1" alt="Playerat Hombre">
+        <h3>Playerat Nike Hombre</h3>
+        <p>$449</p>
+        <button onclick="agregarAlCarrito('Playerat Nike Hombre', 449)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://i.ebayimg.com/images/g/2WoAAOSw9o5nalFB/s-l1600.webp" alt="pans Hombre">
+        <h3>pans Nike Hombre</h3>
+        <p>$129</p>
+        <button onclick="agregarAlCarrito('pans Nike Hombre', 129)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://th.bing.com/th/id/OPHS.B9iHZJNtgW71jQ474C474?w=300&h=300&qlt=20&o=5&dpr=1.3&pid=21.1" alt="Chamarra Hombre">
+        <h3>Chamarra Nike Hombre</h3>
+        <p>$549</p>
+        <button onclick="agregarAlCarrito('Chamarra Nike Hombre', 549)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://th.bing.com/th/id/OPHS.Vj4OpxcoEaCQBA474C474?w=300&h=300&o=5&dpr=1.3&pid=21.1" alt="Conjunto Hombre">
+        <h3>Conjunto Nike Hombre</h3>
+        <p>$649</p>
+        <button onclick="agregarAlCarrito('Conjunto Nike Hombre', 649)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://i.ebayimg.com/images/g/aP4AAOSwlD9nV8k~/s-l1600.webp" alt="Calcetas Hombre">
+        <h3>Calcetas Nike Hombre</h3>
+        <p>$199</p>
+        <button onclick="agregarAlCarrito('Calcetas Nike Hombre', 199)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://i.ebayimg.com/images/g/-4YAAOSwax1k1qZX/s-l1600.webp" alt="Sudadera Hombre">
+        <h3>Sudadera Nike Hombre</h3>
+        <p>$349</p>
+        <button onclick="agregarAlCarrito('Sudadera Nike Hombre', 349)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://th.bing.com/th/id/OPHS.stShome1BfQViQ474C474?w=300&h=300&qlt=20&o=5&dpr=1.3&pid=21.1" alt="Cardigan Hombre">
+        <h3>Cardigan Nike Hombre</h3>
+        <p>$449</p>
+        <button onclick="agregarAlCarrito('Cardigan Nike Hombre', 449)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://i.ebayimg.com/images/g/Qx0AAOSwYqVnLibF/s-l1600.webp" alt="Tenis Hombre">
+        <h3>Tenis Nike Hombre</h3>
+        <p>$499</p>
+        <button onclick="agregarAlCarrito('Tenis Nike Hombre', 499)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://i.ebayimg.com/images/g/9CkAAOSw4Bxk7FD7/s-l1600.webp" alt="Cargo Hombre">
+        <h3>Cargo Nike Hombre</h3>
+        <p>$349</p>
+        <button onclick="agregarAlCarrito('Cargo Nike Hombre', 349)">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="mujeres" class="productos section">
+    <h2>Ropa Deportiva para Mujeres</h2>
+    <div class="productos-grid">
+      <div class="producto">
+        <img src="https://www.tennis-point.es/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwb9f9914f/images/004/450/50313000_000.jpg?q=80&sw=2000" alt="Playera Mujer">
+        <h3>Playera Nike Mujer</h3>
+        <p>$299</p>
+        <button onclick="agregarAlCarrito('Playera Nike Mujer', 299)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://th.bing.com/th/id/R.c4162e55df64fe442342af65c6310dea?rik=Prlr9EWaYaQGTQ&riu=http%3a%2f%2fsgfm.elcorteingles.es%2fSGFM%2fdctm%2fMEDIA03%2f201906%2f07%2f00199444206322____1__640x640.jpg&ehk=1lsUMuc6xrXgpo2PLK82OGTAWWZ0br3oz1OTRANe1%2bs%3d&risl=&pid=ImgRaw&r=0" alt="Short Mujer">
+        <h3>Short Nike Mujer</h3>
+        <p>$349</p>
+        <button onclick="agregarAlCarrito('Short Nike Mujer', 349)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://i.pinimg.com/736x/08/c5/bb/08c5bb28be85e2e84161eb2061273a56.jpg" alt="casaca Mujer">
+        <h3>casaca Nike Mujer</h3>
+        <p>$399</p>
+        <button onclick="agregarAlCarrito('Casaca Nike Mujer', 399)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/12c96ecf-7001-45e6-8b2e-cdd0ac9d276e/prenda-intermedia-de-running-dri-fit-swoosh-run-H3VPGZ.png" alt="Conjunto Mujer">
+        <h3>Conjunto Nike Mujer</h3>
+        <p>$729</p>
+        <button onclick="agregarAlCarrito('Conjunto Nike Mujer', 729)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://th.bing.com/th/id/OIP.3m9K6OvkZYTsjIviVWG9HwHaHa?w=205&h=205&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Leggings Mujer">
+        <h3>Leggings Nike Mujer</h3>
+        <p>$399</p>
+        <button onclick="agregarAlCarrito('Leggings Nike Mujer', 399)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a68d49b1-b334-421d-8132-64e2c24361f3/leggings-de-tiro-medio-de-7-8-con-bolsillos-pro-wZfTW1.png" alt="Leggings Mujer">
+        <h3>Leggings Nike Mujer</h3>
+        <p>$399</p>
+        <button onclick="agregarAlCarrito('Leggings Nike Mujer', 399)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201612/02/00199410403234____1__640x640.jpg" alt="Top Mujer">
+        <h3>Top Nike Mujer</h3>
+        <p>$299</p>
+        <button onclick="agregarAlCarrito('Top Nike Mujer', 299)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://i.pinimg.com/originals/18/04/2b/18042b406998e176202faabb5e580851.jpg" alt="Conjunto Mujer">
+        <h3>Conjunto Nike Mujer</h3>
+        <p>$799</p>
+        <button onclick="agregarAlCarrito('Conjunto Nike Mujer', 799)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://www.elpalaciodehierro.com/on/demandware.static/-/Sites-palacio-master-catalog/default/dwb4f388cd/images/40628418/multicolor/large/40628418_x1.jpg" alt="Sudadera Mujer">
+        <h3>Sudadera Nike Mujer</h3>
+        <p>$429</p>
+        <button onclick="agregarAlCarrito('Sudadera Nike Mujer', 429)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://i.ebayimg.com/images/g/aP4AAOSwlD9nV8k~/s-l1600.webp" alt="Calcetas Mujer">
+        <h3>  Calcetas Nike Mujer</h3>
+        <p>$199</p>
+        <button onclick="agregarAlCarrito('Calcetas Nike Mujer', 199)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://th.bing.com/th/id/OIP.5sL9SOoW9A61DLdgDLcLxgHaHa?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3" alt="Playera Mujer">
+        <h3>Playera Nike Mujer</h3>
+        <p>$299</p>
+        <button onclick="agregarAlCarrito('Playera Nike Mujer', 299)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://th.bing.com/th/id/R.bbc4052d62d3ac9f776adc673079abd1?rik=gEdkfzPYAJy74g&pid=ImgRaw&r=0" alt="Tenis Mujer">
+        <h3>Tenis Nike Mujer</h3>
+        <p>$399</p>
+        <button onclick="agregarAlCarrito('Tenis Nike Mujer', 399)">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="carrito" class="productos section">
+    <h2>Tu Carrito de Compras</h2>
+    <div id="carrito-items" class="productos-grid"></div>
+    <div style="margin-top: 30px;">
+      <button onclick="pagarCarrito()" style="background-color:#ff3c00; color:white; padding:1rem 2rem; border:none; border-radius:8px; font-size:1rem; cursor:pointer;">Pagar</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SPORT TPL Mexico</p>
+  </footer>
+
+  <script>
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll('.section, .productos');
+      secciones.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      if (id === 'carrito') mostrarCarrito();
+    }
+
+    function agregarAlCarrito(nombre, precio) {
+      const producto = { nombre, precio };
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito.push(producto);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      alert(`${nombre} agregado al carrito`);
+    }
+
+    function mostrarCarrito() {
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      const contenedor = document.getElementById("carrito-items");
+      contenedor.innerHTML = "";
+      if (carrito.length === 0) {
+        contenedor.innerHTML = "<p>Tu carrito está vacío.</p>";
+        return;
+      }
+      carrito.forEach((item, index) => {
+        contenedor.innerHTML += `
+          <div class="producto">
+            <h3>${item.nombre}</h3>
+            <p>$${item.precio}</p>
+            <button onclick="eliminarProducto(${index})">Eliminar</button>
+          </div>
+        `;
+      });
+    }
+
+    function eliminarProducto(indice) {
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito.splice(indice, 1);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      mostrarCarrito();
+    }
+
+    function pagarCarrito() {
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      if (carrito.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
+      }
+      const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+      const confirmacion = confirm(`El total a pagar es $${total}. ¿Deseas continuar con el pago?`);
+      if (confirmacion) {
+        alert("¡Gracias por tu compra! Tu pedido está en camino.");
+        localStorage.removeItem("carrito");
+        mostrarCarrito();
+      }
+    }
+  </script>
+</body>
+</html>
