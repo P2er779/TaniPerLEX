@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda de Zapatos</title>
   <style>
     /* --------- ESTILOS GENERALES --------- */
@@ -97,7 +97,7 @@
       background-color: #333;
     }
 
-    /* --------- PRODUCTOS GENERALES --------- */
+    /* --------- PRODUCTOS --------- */
     .productos {
       padding: 60px 20px;
       text-align: center;
@@ -151,19 +151,20 @@
     }
     .producto button:hover { background-color: #333; }
 
-    /* --------- SECCIÓN HOMBRES --------- */
-    #hombres { background-color: #e0f7fa; }
+    #hombres {
+      background-color: #e0f7fa;
+    }
     #hombres .producto p { color: #00796b; }
     #hombres .producto button { background-color: #004d40; }
     #hombres .producto button:hover { background-color: #00695c; }
 
-    /* --------- SECCIÓN MUJERES --------- */
-    #mujeres { background-color: #fce4ec; }
+    #mujeres {
+      background-color: #fce4ec;
+    }
     #mujeres .producto p { color: #d81b60; }
     #mujeres .producto button { background-color: #880e4f; }
     #mujeres .producto button:hover { background-color: #ad1457; }
 
-    /* --------- FOOTER --------- */
     footer {
       background: #111;
       color: white;
@@ -175,6 +176,108 @@
 </head>
 <body>
 
+<header>
+  <div class="logo">Zapatería</div>
+  <nav>
+    <ul>
+      <li><a href="#hombres">Hombres</a></li>
+      <li><a href="#mujeres">Mujeres</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-texto">
+    <h1>Calzado con Estilo</h1>
+    <p>Descubre nuestra colección de temporada</p>
+    <a href="#hombres" class="btn">Ver productos</a>
+  </div>
+</section>
+
+<section class="buscador-articulos">
+  <h2>Buscar Artículo</h2>
+  <input type="text" id="busqueda" placeholder="Escribe el nombre del artículo" />
+  <button onclick="buscarArticulo()">Buscar</button>
+  <p id="resultado-busqueda"></p>
+</section>
+
+<section class="productos" id="hombres">
+  <h2>Para Hombres</h2>
+  <div class="productos-grid">
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x300?text=Tenis+Deportivos" alt="Tenis Deportivos">
+      <h3>Tenis Deportivos</h3>
+      <p>$899 MXN</p>
+      <button>Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x300?text=Zapatos+Casuales" alt="Zapatos Casuales">
+      <h3>Zapatos Casuales</h3>
+      <p>$999 MXN</p>
+      <button>Agregar al carrito</button>
+    </div>
+  </div>
+</section>
+
+<section class="productos" id="mujeres">
+  <h2>Para Mujeres</h2>
+  <div class="productos-grid">
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x300?text=Botines+de+Mujer" alt="Botines de Mujer">
+      <h3>Botines de Mujer</h3>
+      <p>$1,099 MXN</p>
+      <button>Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x300?text=Zapatillas+Negras" alt="Zapatillas Negras">
+      <h3>Zapatillas Negras</h3>
+      <p>$899 MXN</p>
+      <button>Agregar al carrito</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Zapatería. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+const articulosDisponibles = [
+  "Tenis deportivos",
+  "Botines de mujer",
+  "Zapatos artesanales",
+  "Sandalias",
+  "Zapatos casuales",
+  "Zapatillas negras",
+  "Tenis blancos"
+];
+
+function buscarArticulo() {
+  const entrada = document.getElementById("busqueda").value.trim().toLowerCase();
+  const resultado = document.getElementById("resultado-busqueda");
+
+  if (entrada === "") {
+    resultado.textContent = "Por favor, escribe un nombre para buscar.";
+    resultado.style.color = "orange";
+    return;
+  }
+
+  const encontrado = articulosDisponibles.some(articulo =>
+    articulo.toLowerCase().includes(entrada)
+  );
+
+  if (encontrado) {
+    resultado.textContent = "✅ El artículo está disponible.";
+    resultado.style.color = "green";
+  } else {
+    resultado.textContent = "❌ El artículo no está disponible.";
+    resultado.style.color = "red";
+  }
+}
+</script>
+
+</body>
+</html>
 
 
 
