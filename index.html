@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,127 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPORT TPL Mexico</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f5;
-      color: #333;
-    }
-
-    header {
-      background-color: #111;
-      color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #ff3c00;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      transition: color 0.3s;
-      cursor: pointer;
-    }
-
-    nav a:hover {
-      color: #ff3c00;
-    }
-
-    .productos {
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .productos h2 {
-      margin-bottom: 30px;
-      font-size: 2rem;
-      color: #111;
-    }
-
-    .productos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .producto {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .producto:hover {
-      transform: translateY(-5px);
-    }
-
-    .producto img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .producto h3 {
-      margin-bottom: 10px;
-    }
-
-    .producto p {
-      font-weight: bold;
-      color: #ff3c00;
-      margin-bottom: 10px;
-    }
-
-    .producto button {
-      background-color: #111;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .producto button:hover {
-      background-color: #333;
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    .section {
-      display: none;
-    }
-
-    .active {
-      display: block;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f5; color: #333; }
+    header { background-color: #111; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 2rem; font-weight: bold; color: #ff3c00; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav a { text-decoration: none; color: white; font-weight: 500; transition: color 0.3s; cursor: pointer; }
+    nav a:hover { color: #ff3c00; }
+    .productos { padding: 50px 20px; text-align: center; }
+    .productos h2 { margin-bottom: 30px; font-size: 2rem; color: #111; }
+    .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: auto; }
+    .producto { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .producto:hover { transform: translateY(-5px); }
+    .producto img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+    .producto h3 { margin-bottom: 10px; }
+    .producto p { font-weight: bold; color: #ff3c00; margin-bottom: 10px; }
+    .producto button { background-color: #111; color: white; padding: 0.6rem 1.2rem; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    .producto button:hover { background-color: #333; }
+    footer { background: #111; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    .section { display: none; }
+    .active { display: block; }
+    .form-pago { max-width: 400px; margin: auto; text-align: left; }
+    .form-pago label { display: block; margin: 10px 0 5px; }
+    .form-pago input { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc; }
+    .form-pago button { background-color: #ff3c00; color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; }
+    .form-pago button:hover { background-color: #e03a00; }
+    .contacto-links a { display: inline-block; margin: 10px; padding: 10px 20px; background: #111; color: white; border-radius: 5px; text-decoration: none; }
+    .contacto-links a:hover { background: #333; }
   </style>
 </head>
 <body>
@@ -138,12 +43,14 @@
         <li><a onclick="mostrarSeccion('hombres')">Hombres</a></li>
         <li><a onclick="mostrarSeccion('mujeres')">Mujeres</a></li>
         <li><a onclick="mostrarSeccion('carrito')">Carrito</a></li>
+        <li><a onclick="mostrarSeccion('contacto')">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <section id="inicio" class="productos active">
     <h2>Bienvenido a SPORT TPL Mexico</h2>
+    <p>Ropa deportiva NIKE para toda la UAEMEX.</p>
     <p>Selecciona una categoría del menú para comenzar.</p>
   </section>
 
@@ -307,7 +214,30 @@
     <h2>Tu Carrito de Compras</h2>
     <div id="carrito-items" class="productos-grid"></div>
     <div style="margin-top: 30px;">
-      <button onclick="pagarCarrito()" style="background-color:#ff3c00; color:white; padding:1rem 2rem; border:none; border-radius:8px; font-size:1rem; cursor:pointer;">Pagar</button>
+      <button onclick="mostrarSeccion('pago')">Pagar</button>
+    </div>
+  </section>
+
+  <section id="pago" class="productos section">
+    <h2>Formulario de Pago</h2>
+    <form class="form-pago" onsubmit="procesarPago(event)">
+      <label>Nombre del Titular</label>
+      <input type="text" required>
+      <label>Número de Tarjeta</label>
+      <input type="text" maxlength="16" required>
+      <label>Fecha de Vencimiento</label>
+      <input type="text" placeholder="MM/AA" required>
+      <label>CVV</label>
+      <input type="text" maxlength="4" required>
+      <button type="submit">Confirmar Pago</button>
+    </form>
+  </section>
+
+  <section id="contacto" class="productos section">
+    <h2>Contáctanos</h2>
+    <div class="contacto-links">
+      <a href="https://www.instagram.com/sport_tpl" target="_blank">Instagram</a>
+      <a href="https://wa.me/5210000000000" target="_blank">WhatsApp</a>
     </div>
   </section>
 
@@ -317,8 +247,7 @@
 
   <script>
     function mostrarSeccion(id) {
-      const secciones = document.querySelectorAll('.section, .productos');
-      secciones.forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('.section, .productos').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       if (id === 'carrito') mostrarCarrito();
     }
@@ -334,19 +263,9 @@
     function mostrarCarrito() {
       const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
       const contenedor = document.getElementById("carrito-items");
-      contenedor.innerHTML = "";
-      if (carrito.length === 0) {
-        contenedor.innerHTML = "<p>Tu carrito está vacío.</p>";
-        return;
-      }
+      contenedor.innerHTML = carrito.length ? '' : '<p>Tu carrito está vacío.</p>';
       carrito.forEach((item, index) => {
-        contenedor.innerHTML += `
-          <div class="producto">
-            <h3>${item.nombre}</h3>
-            <p>$${item.precio}</p>
-            <button onclick="eliminarProducto(${index})">Eliminar</button>
-          </div>
-        `;
+        contenedor.innerHTML += `<div class="producto"><h3>${item.nombre}</h3><p>$${item.precio}</p><button onclick="eliminarProducto(${index})">Eliminar</button></div>`;
       });
     }
 
@@ -357,19 +276,11 @@
       mostrarCarrito();
     }
 
-    function pagarCarrito() {
-      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-      if (carrito.length === 0) {
-        alert("Tu carrito está vacío.");
-        return;
-      }
-      const total = carrito.reduce((sum, item) => sum + item.precio, 0);
-      const confirmacion = confirm(`El total a pagar es $${total}. ¿Deseas continuar con el pago?`);
-      if (confirmacion) {
-        alert("¡Gracias por tu compra! Tu pedido está en camino.");
-        localStorage.removeItem("carrito");
-        mostrarCarrito();
-      }
+    function procesarPago(event) {
+      event.preventDefault();
+      alert("Pago procesado con éxito. ¡Gracias por tu compra!");
+      localStorage.removeItem("carrito");
+      mostrarSeccion('inicio');
     }
   </script>
 </body>
