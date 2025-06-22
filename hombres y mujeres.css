@@ -1,0 +1,220 @@
+/* --------- ESTILOS GENERALES --------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --------- CABECERA Y NAVEGACIÓN --------- */
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo { font-size: 2rem; font-weight: bold; color: #ff3c00; }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+nav a:hover { color: #ff3c00; }
+
+/* --------- HERO --------- */
+.hero {
+  background: url('https://i.pinimg.com/originals/6d/76/75/6d76750a1df3a7d56ae6c08070a7614b.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.hero-texto {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+}
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; margin-bottom: 20px; }
+.btn {
+  background-color: #ff3c00;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.btn:hover { background-color: #e63500; }
+
+/* --------- PRODUCTOS GENERALES --------- */
+.productos {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+.productos h2 {
+  margin-bottom: 40px;
+  font-size: 2.4rem;
+  color: #111;
+}
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+.producto {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.producto img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.producto h3 { margin-bottom: 10px; font-size: 1.1rem; color: #222; }
+.producto p {
+  font-weight: bold;
+  color: #ff3c00;
+  margin-bottom: 15px;
+}
+.producto button {
+  background-color: #111;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.producto button:hover { background-color: #333; }
+
+/* --------- SECCIÓN HOMBRES --------- */
+#hombres {
+  background-color: #e0f7fa; /* azul suave */
+}
+#hombres .producto p {
+  color: #00796b;
+}
+#hombres .producto button {
+  background-color: #004d40;
+}
+#hombres .producto button:hover {
+  background-color: #00695c;
+}
+
+/* --------- SECCIÓN MUJERES --------- */
+#mujeres {
+  background-color: #fce4ec; /* rosa suave */
+}
+#mujeres .producto p {
+  color: #d81b60;
+}
+#mujeres .producto button {
+  background-color: #880e4f;
+}
+#mujeres .producto button:hover {
+  background-color: #ad1457;
+}
+
+/* --------- CARRITO --------- */
+.carrito {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.carrito h2 { margin-bottom: 20px; color: #111; }
+.carrito ul { list-style: none; padding: 0; }
+.carrito li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+.carrito-total {
+  text-align: right;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff3c00;
+}
+.carrito button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* --------- FORMULARIO DE PAGO --------- */
+.formulario-pago {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+.formulario-pago input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.formulario-pago button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #ff3c00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.formulario-pago button[type="submit"]:hover {
+  background-color: #e63500;
+}
+
+/* --------- FOOTER --------- */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+

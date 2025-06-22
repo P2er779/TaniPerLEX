@@ -259,6 +259,51 @@
   </footer>
 
   <script>
+    function configurarBotones() {
+  const botones = document.querySelectorAll(".producto button");
+  const productos = [
+    { nombre: "Playera Dry Fit", precio: 399 },
+    { nombre: "Short Nike Sport", precio: 349 },
+    { nombre: "Sudadera Tech Fleece", precio: 1299 },
+    { nombre: "Leggings Pro", precio: 499 },
+    { nombre: "Top Nike Impact", precio: 299 },
+    { nombre: "Chamarra Windrunner", precio: 1499 }
+  ];
+  document.querySelector('.formulario-pago').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  if (carrito.length === 0) {
+    alert("El carrito está vacío.");
+    return;
+  }
+
+  const nombre = document.getElementById('nombre').value.trim();
+  const tarjeta = document.getElementById('tarjeta').value.trim();
+  const expiracion = document.getElementById('expiracion').value.trim();
+  const cvv = document.getElementById('cvv').value.trim();
+
+  const tarjetaValida = /^\d{16}$/.test(tarjeta);
+  const expiracionValida = /^\d{2}\/\d{2}$/.test(expiracion);
+  const cvvValido = /^\d{3}$/.test(cvv);
+
+  if (!nombre || !tarjetaValida || !expiracionValida || !cvvValido) {
+    alert("Por favor, llena los datos correctamente.");
+    return;
+  }
+
+  alert("✅ Compra exitosa. ¡Gracias por tu pago!");
+
+  carrito.length = 0;
+  actualizarCarrito();
+  this.reset();
+});
+
+
+  botones.forEach((btn, i) => {
+    btn.addEventListener('click', () => agregarAlCarrito(productos[i].nombre, productos[i].precio));
+  });
+}
+
     const carrito = [];
     const listaCarrito = document.getElementById('lista-carrito');
     const totalCarrito = document.getElementById('total-carrito');
@@ -314,7 +359,6 @@
   </script>
 </body>
 </html>
-
 
 
 
